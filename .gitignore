@@ -1,0 +1,9 @@
+
+*.js
+*.txt
+*.md
+*.css
+*.ico
+example-app/public/.htaccess
+*.json
+*.xml
