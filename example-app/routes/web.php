@@ -70,8 +70,8 @@ Route::get('/', function () use ($tasks) {
     return redirect()->route('tasks.index');
 });
 
-Route::get('/', function () use ($tasks) {
-    return view('login',[
+Route::get('/tasks', function () use ($tasks) {
+    return view('index',[
         'tasks'=>$tasks
     ]);
 })->name('tasks.index');
@@ -82,6 +82,6 @@ Route::get('/tasks/{id}', function ($id) use ($tasks) {
         abort(Response::HTTP_NOT_FOUND);
     }
 
-    return view('login',['task'=>$task]);
+    return view('show',['task'=>$task]);
 })->name('tasks.show');
 
